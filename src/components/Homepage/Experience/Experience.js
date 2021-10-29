@@ -1,15 +1,16 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import "./Experience.css";
 
 const Experience = () => {
     return (
-        <div className="bg-dark text-white">
+        <div className="experience">
             <Container>
-                <h5>WHY CHOOSE US</h5>
+                <h4 className="">WHY CHOOSE US</h4>
                 <h1>Countless Experiences</h1>
                 <Row>
                     <Col md={3} xs={12}>
-                        <div>
+                        <div className="experience-card">
                             <i>df</i>
                             <h2>Experienced</h2>
                             <p>
@@ -19,7 +20,7 @@ const Experience = () => {
                         </div>
                     </Col>
                     <Col md={3} xs={12}>
-                        <div>
+                        <div className="experience-card">
                             <i>df</i>
                             <h2>Worldwide</h2>
                             <p>
@@ -29,7 +30,7 @@ const Experience = () => {
                         </div>
                     </Col>
                     <Col md={3} xs={12}>
-                        <div>
+                        <div className="experience-card">
                             <i>df</i>
                             <h2>Cheap</h2>
                             <p>
@@ -39,7 +40,7 @@ const Experience = () => {
                         </div>
                     </Col>
                     <Col md={3} xs={12}>
-                        <div>
+                        <div className="experience-card">
                             <i>df</i>
                             <h2>24/7 Service</h2>
                             <p>

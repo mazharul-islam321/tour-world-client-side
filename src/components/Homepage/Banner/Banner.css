@@ -1,6 +1,50 @@
 .banner-img {
     background-image: url(https://i.ibb.co/S3ZxB3K/pA2Pez.jpg);
     background-size: 100% 100%;
-    /* background-attachment: fixed; */
     height: 550px;
+}
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-text h3 {
+    background-color: #363535;
+    border: 2px solid #ff8906;
+    padding: 5px;
+    border-radius: 10px;
+    color: #f5eeee;
+    font-weight: 500;
+    margin-top: 100px;
+    font-size: 40px;
+}
+.banner-text h2 {
+    background-color: #363535;
+    border: 2px solid #ff8906;
+    padding: 5px;
+    border-radius: 10px;
+    color: #f5eeee;
+    margin-top: 10px;
+    font-size: 45px;
+    font-weight: 500;
+}
+.banner-text h1 {
+    background-color: #363535;
+    border: 2px solid #ff8906;
+    border-radius: 10px;
+    padding: 5px;
+    color: #f5eeee;
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 500;
+}
+.banner-text p {
+    background-color: #363535;
+    border: 2px solid #ff8906;
+    border-radius: 10px;
+    color: #d1d2d8;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 18px;
 }

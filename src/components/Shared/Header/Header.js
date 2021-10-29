@@ -9,6 +9,7 @@ const Header = () => {
     return (
         <>
             <Navbar
+                className="py-3"
                 collapseOnSelect
                 expand="lg"
                 bg="dark"
@@ -16,26 +17,36 @@ const Header = () => {
                 sticky="top"
             >
                 <Container>
-                    <Navbar.Brand as={Link} to="/">
-                        <img className="headerimg" src="" alt="" />
-                        TOUR WORLD
+                    <Navbar.Brand
+                        as={Link}
+                        to="/"
+                        className="d-flex align-items-center"
+                    >
+                        <img
+                            className="headerimg"
+                            src="https://i.ibb.co/48DwBCw/tour-world.jpg"
+                            alt=""
+                        />
+                        <i className="fs-3 fw-bold ">TOUR WORLD</i>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="me-auto mx-auto ">
                             <Nav.Link as={Link} to="/home">
                                 Home
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/departments">
-                                Departments
+                            <Nav.Link as={Link} to="/about">
+                                About
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/allService">
-                                Services
+                            <Nav.Link as={Link} to="/mybooking">
+                                My Bookings
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/doctors">
-                                Doctors
+                            <Nav.Link as={Link} to="/managebooking">
+                                Manage All Booking
                             </Nav.Link>
-
+                            <Nav.Link as={Link} to="/addnewbooking">
+                                Add New Booking
+                            </Nav.Link>
                             <Nav.Link as={Link} to="/contact">
                                 Contact
                             </Nav.Link>
@@ -51,7 +62,11 @@ const Header = () => {
                             </span>
                         ) : (
                             <Nav>
-                                <Nav.Link as={Link} to="/login">
+                                <Nav.Link
+                                    as={Link}
+                                    to="/login"
+                                    className="fs-5"
+                                >
                                     Log in
                                 </Nav.Link>
                                 {/* <Nav.Link as={Link} to="/signup">

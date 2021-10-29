@@ -1,3 +1,10 @@
+.headerimg {
+    width: 60px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
 .logout {
     font-size: large;
     font-weight: 600;

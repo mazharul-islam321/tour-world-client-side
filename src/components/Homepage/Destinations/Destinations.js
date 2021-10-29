@@ -1,29 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import "./Destinations.css";
 
 const Destinations = () => {
+    const [places, setPlaces] = useState([]);
+    useEffect(() => {
+        const uri = "http://localhost:4000/allbooking";
+        fetch(uri)
+            .then((res) => res.json())
+            .then((data) => setPlaces(data));
+    }, []);
     return (
-        <div className="bg-dark text-white ">
-            <h2>this is Destination section</h2>
+        <div className="destination">
+            <h4 className="text-center">Our Destination</h4>
+            <h1 className="text-center">Our Best Destination</h1>
             <Container>
-                <Row xs={1} md={2} className="g-4">
-                    {Array.from({ length: 4 }).map((_, idx) => (
-                        <Col>
-                            <Card>
+                <Row xs={1} md={2} lg={4} className="g-4">
+                    {places.map((place) => (
+                        <Col key={place._id}>
+                            <Card className="card-style">
                                 <Card.Img
                                     variant="top"
-                                    src="holder.js/100px160"
+                                    src={place.img}
+                                    className="card-img"
                                 />
                                 <Card.Body>
-                                    <Card.Title className="text-dark">
-                                        Card title
+                                    <Card.Title className="card-title">
+                                        {place.name}
                                     </Card.Title>
-                                    <Card.Text className="text-dark">
-                                        This is a longer card with supporting
-                                        text below as a natural lead-in to
-                                        additional content. This content is a
-                                        little bit longer.
+                                    <Card.Text className="card-para">
+                                        {place.description}
                                     </Card.Text>
+                                    <Card.Text className="card-para">
+                                        ${place.price}
+                                    </Card.Text>
+                                    <button className="card-button">
+                                        Book Now
+                                    </button>
                                 </Card.Body>
                             </Card>
                         </Col>

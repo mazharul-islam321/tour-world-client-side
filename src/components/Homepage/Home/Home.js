@@ -1,5 +1,4 @@
 import React from "react";
-// import { Container } from "react-bootstrap";
 import Banner from "../Banner/Banner";
 import Destinations from "../Destinations/Destinations";
 import Experience from "../Experience/Experience";
