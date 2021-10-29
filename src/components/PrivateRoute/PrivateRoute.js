@@ -1,10 +1,31 @@
 import React from "react";
+import { Redirect, Route } from "react-router";
+import { Spinner } from "react-bootstrap";
+import useAuth from "../../hooks/useAuth";
 
-const PrivateRoute = () => {
+const PrivateRoute = ({ children, ...rest }) => {
+    const { user } = useAuth();
+    if (isLoading) {
+        return <Spinner animation="grow" variant="danger" />;
+    }
     return (
-        <div>
-            <h2>this is private route</h2>
-        </div>
+        <>
+            <Route
+                {...rest}
+                render={({ location }) =>
+                    user?.displayName ? (
+                        children
+                    ) : (
+                        <Redirect
+                            to={{
+                                pathname: "/login",
+                                state: { from: location },
+                            }}
+                        ></Redirect>
+                    )
+                }
+            ></Route>
+        </>
     );
 };
 
