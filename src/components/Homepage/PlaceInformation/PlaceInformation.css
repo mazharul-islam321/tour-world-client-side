@@ -1,0 +1,12 @@
+.place-order-info img {
+    width: 75%;
+    height: 45vh;
+    border-radius: 10px;
+}
+.place-order-info h1 {
+    color: #fffffe;
+    margin: 15px 0;
+}
+.place-order-info h5 {
+    color: #a7a9be;
+}

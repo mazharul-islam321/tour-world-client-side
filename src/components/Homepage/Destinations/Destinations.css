@@ -15,9 +15,13 @@
     text-align: center;
     border-radius: 10px;
 }
+/* .card-style:hover {
+    border: 1px solid #ff8906;
+} */
 .card-img {
     width: 100%;
     height: 200px;
+    border-radius: 10px;
 }
 .card-title {
     color: #fffffe;

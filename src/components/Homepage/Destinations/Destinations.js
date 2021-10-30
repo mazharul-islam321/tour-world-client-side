@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Destinations.css";
 
 const Destinations = () => {
@@ -9,7 +9,9 @@ const Destinations = () => {
         const uri = "http://localhost:4000/allbooking";
         fetch(uri)
             .then((res) => res.json())
-            .then((data) => setPlaces(data));
+            .then((data) => {
+                setPlaces(data);
+            });
     }, []);
     return (
         <div className="destination">
@@ -35,9 +37,11 @@ const Destinations = () => {
                                     <Card.Text className="card-para">
                                         ${place.price}
                                     </Card.Text>
-                                    <button className="card-button">
-                                        Book Now
-                                    </button>
+                                    <Link to={`/placeorder/${place._id}`}>
+                                        <button className="card-button">
+                                            Book Now
+                                        </button>
+                                    </Link>
                                 </Card.Body>
                             </Card>
                         </Col>

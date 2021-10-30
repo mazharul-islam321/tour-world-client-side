@@ -23,7 +23,9 @@ const AddNewBooking = () => {
     };
     return (
         <div className="add-services">
-            <h2 className="text-center">Add a New Destination</h2>
+            <h2 className="text-center">
+                Add New <span>Destination</span>
+            </h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
@@ -32,19 +34,22 @@ const AddNewBooking = () => {
                         maxLength: 20,
                     })}
                     placeholder="Place Name"
+                    required
                 />
                 <textarea
                     {...register("description")}
                     placeholder="Place description"
+                    required
                 />
                 <input
                     type="number"
                     {...register("price")}
                     placeholder="Price"
+                    required
                 />
-                <input {...register("img")} placeholder="Image Url" />
+                <input {...register("img")} placeholder="Image Url" required />
 
-                <input type="submit" />
+                <input type="submit" value="submit" className="submit-form" />
             </form>
         </div>
     );

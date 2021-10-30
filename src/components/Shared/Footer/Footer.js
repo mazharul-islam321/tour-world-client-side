@@ -1,15 +1,18 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
+import "./Footer.css";
 
 const Footer = () => {
+    const { user } = useAuth();
     return (
-        <div className="bg-dark text-white">
+        <div className="footer-style py-5">
             <Container>
                 <Row>
-                    <Col md={3} xs={12}>
+                    <Col md={3} xs={12} className="my-3">
                         <div>
-                            <h1>tour wprld</h1>
+                            <h1>TOUR WORLD</h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit.
@@ -17,45 +20,59 @@ const Footer = () => {
                             <i>icons</i>
                         </div>
                     </Col>
-                    <Col md={3} xs={12}>
+                    <Col md={3} xs={12} className="my-3">
                         <div>
-                            <h2>Quick Links</h2>
+                            <h2 className="mb-3">Quick Links</h2>
                             <div>
-                                <Link to="">Home</Link>
+                                <Link to="/" className="quick-link">
+                                    Home
+                                </Link>
+                            </div>
+                            <div className="quick-link">
+                                <Link to="/contact" className="quick-link">
+                                    contact
+                                </Link>
                             </div>
                             <div>
-                                <Link to="">contact</Link>
+                                <Link to="/about" className="quick-link">
+                                    about
+                                </Link>
                             </div>
                             <div>
-                                <Link to="">all service</Link>
-                            </div>
-                            <div>
-                                <Link to="">about</Link>
+                                {!user?.email && (
+                                    <Link to="/login" className="quick-link">
+                                        Log In
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     </Col>
-                    <Col md={3} xs={12}>
+                    <Col md={3} xs={12} className="my-3">
                         <div>
-                            <h2>Our Address</h2>
+                            <h2 className="mb-3">Our Address</h2>
                             <div>
                                 <span>3596 Longview Ave, NY</span>
                             </div>
-                            <div>
+                            <div className="my-2">
                                 <span>718-570-8650</span>
                             </div>
                             <div>
                                 <span>anymail@mail.com</span>
                             </div>
-                            <div>
+                            <div className="mt-2">
                                 <span>09.00 - 17.00</span>
                             </div>
                         </div>
                     </Col>
-                    <Col md={3} xs={12}>
+                    <Col md={3} xs={12} className="my-3">
                         <div>
                             <h2>For News</h2>
-                            <input type="text" />
-                            <button>subscribe</button>
+                            <input
+                                type="text"
+                                placeholder="Your Email"
+                                className="footer-input"
+                            />
+                            <button className="footer-button">subscribe</button>
                         </div>
                     </Col>
                 </Row>

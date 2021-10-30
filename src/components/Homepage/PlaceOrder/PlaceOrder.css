@@ -1,0 +1,14 @@
+.place-order {
+    background-color: #0f0e17;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.confirm {
+    color: #ff8906;
+}
+.place-order h2 {
+    color: hsl(60, 100%, 100%);
+}
+.place-order p {
+    color: #a7a9be;
+}

@@ -1,0 +1,39 @@
+.footer-style {
+    background-color: rgb(13, 13, 15);
+    text-align: center;
+}
+.footer-style h1 {
+    color: #fffffe;
+}
+.footer-style h2 {
+    color: #fffffe;
+}
+.footer-style p {
+    color: #a7a9be;
+}
+.quick-link {
+    text-decoration: none;
+    margin: 10px;
+    color: #ff8906;
+}
+.footer-style span {
+    color: #a7a9be;
+}
+.footer-input {
+    background-color: black;
+    padding: 8px;
+    border: 2px solid #ff8906;
+    border-radius: 20px;
+    text-align: center;
+    margin: 15px;
+}
+.footer-button {
+    background-color: black;
+    color: #fffffe;
+    padding: 10px 15px;
+    border: 2px solid #ff8906;
+    border-radius: 20px;
+}
+.footer-button:hover {
+    background-color: #ff8906;
+}

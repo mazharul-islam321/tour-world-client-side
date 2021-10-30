@@ -27,7 +27,9 @@ const Header = () => {
                             src="https://i.ibb.co/48DwBCw/tour-world.jpg"
                             alt=""
                         />
-                        <i className="fs-3 fw-bold ">TOUR WORLD</i>
+                        <i className="fs-3 fw-bold ">
+                            TOUR <span className="word-color">WORLD</span>
+                        </i>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -35,24 +37,28 @@ const Header = () => {
                             <Nav.Link as={Link} to="/home">
                                 Home
                             </Nav.Link>
+                            {user?.email && (
+                                <>
+                                    <Nav.Link as={Link} to="/mybooking">
+                                        My Bookings
+                                    </Nav.Link>
+                                    <Nav.Link as={Link} to="/managebooking">
+                                        Manage All Booking
+                                    </Nav.Link>
+                                    <Nav.Link as={Link} to="/addnewbooking">
+                                        Add New Booking
+                                    </Nav.Link>
+                                </>
+                            )}
                             <Nav.Link as={Link} to="/about">
                                 About
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="/mybooking">
-                                My Bookings
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="/managebooking">
-                                Manage All Booking
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="/addnewbooking">
-                                Add New Booking
                             </Nav.Link>
                             <Nav.Link as={Link} to="/contact">
                                 Contact
                             </Nav.Link>
                         </Nav>
 
-                        {user.email ? (
+                        {user?.email ? (
                             <span>
                                 <span className="username"></span>
                                 <span className=" logout" onClick={logOut}>
@@ -69,9 +75,6 @@ const Header = () => {
                                 >
                                     Log in
                                 </Nav.Link>
-                                {/* <Nav.Link as={Link} to="/signup">
-                                    Sign Up
-                                </Nav.Link> */}
                             </Nav>
                         )}
                     </Navbar.Collapse>
