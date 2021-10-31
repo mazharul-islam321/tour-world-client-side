@@ -9,7 +9,7 @@ const MyBooking = () => {
     const { user } = useAuth();
     const [allBooking, setAllBooking] = useState([]);
     useEffect(() => {
-        const uri = `http://localhost:4000/mybooking/${user?.email}`;
+        const uri = `https://dark-labyrinth-92476.herokuapp.com/mybooking/${user?.email}`;
         fetch(uri)
             .then((res) => res.json())
             .then((data) => setAllBooking(data));
@@ -18,9 +18,12 @@ const MyBooking = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("are you sure, you want to delete!!!");
         if (proceed) {
-            fetch(`http://localhost:4000/mybooking/${id}`, {
-                method: "DELETE",
-            })
+            fetch(
+                `https://dark-labyrinth-92476.herokuapp.com/mybooking/${id}`,
+                {
+                    method: "DELETE",
+                }
+            )
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.deletedCount > 0) {

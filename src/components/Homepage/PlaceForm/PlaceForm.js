@@ -42,7 +42,7 @@ const PlaceForm = (props) => {
             phone,
         };
         // console.log(saveBooking);
-        const uri = "http://localhost:4000/placebooking";
+        const uri = "https://dark-labyrinth-92476.herokuapp.com/placebooking";
         fetch(uri, {
             method: "POST",
             headers: {

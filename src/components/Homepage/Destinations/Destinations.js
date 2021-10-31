@@ -9,7 +9,7 @@ const Destinations = () => {
     const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        const uri = "http://localhost:4000/allbooking";
+        const uri = "https://dark-labyrinth-92476.herokuapp.com/allbooking";
         fetch(uri)
             .then((res) => res.json())
             .then((data) => {

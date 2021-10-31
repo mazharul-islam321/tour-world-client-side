@@ -5,7 +5,7 @@ import "./AddNewBooking.css";
 const AddNewBooking = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        const uri = `http://localhost:4000/allbooking`;
+        const uri = `https://dark-labyrinth-92476.herokuapp.com/allbooking`;
         fetch(uri, {
             method: "POST",
             headers: {
