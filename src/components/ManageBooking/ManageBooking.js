@@ -10,7 +10,48 @@ const ManageBooking = () => {
         fetch("http://localhost:4000/manageallorder")
             .then((res) => res.json())
             .then((data) => setManageeBooking(data));
-    }, []);
+    }, [manageeBooking]);
+
+    const handleDelete = (id) => {
+        const proceed = window.confirm("are you sure, you want to delete!!!");
+        if (proceed) {
+            fetch(`http://localhost:4000/mybooking/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.deletedCount > 0) {
+                        alert("deleted successfully");
+                        const remainingBooking = manageeBooking?.filter(
+                            (deletebooking) => deletebooking._id !== id
+                        );
+                        setManageeBooking(remainingBooking);
+                    }
+                });
+        }
+    };
+
+    const handleUpdate = (id) => {
+        const updatestatus = manageeBooking.find(
+            (update) => update?._id === id
+        );
+        updatestatus.status = "approved";
+
+        const uri = `http://localhost:4000/mybooking/${id}`;
+        fetch(uri, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(updatestatus),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.modifiedCount > 0) {
+                    alert("updated successfully");
+                }
+            });
+    };
 
     return (
         <div className="ManageBooking">
@@ -31,11 +72,28 @@ const ManageBooking = () => {
                                     <Card.Title>{booking?.name}</Card.Title>
                                     <h5>Place: {booking?.placeName}</h5>
                                     <Card.Text>
-                                        {booking?.placeDescriptions}
+                                        {booking?.placeDescriptions.slice(
+                                            0,
+                                            150
+                                        )}
+                                        ...
                                     </Card.Text>
                                     <p>${booking?.placePrice}</p>
-                                    <button>delete</button>
-                                    <button>{booking?.status}</button>
+                                    <p>status: {booking?.status}</p>
+                                    <button
+                                        onClick={() =>
+                                            handleDelete(booking?._id)
+                                        }
+                                    >
+                                        delete
+                                    </button>
+                                    <button
+                                        onClick={() =>
+                                            handleUpdate(booking?._id)
+                                        }
+                                    >
+                                        {booking?.status}
+                                    </button>
                                 </Card.Body>
                             </Card>
                         </Col>

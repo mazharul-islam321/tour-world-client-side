@@ -16,7 +16,7 @@ const PlaceOrder = () => {
             .then((res) => res.json())
             .then((data) => setBooking(data));
     }, [id]);
-    console.log(booking);
+    // console.log(booking);
     return (
         <div className="place-order">
             <h2 className="text-center my-5">

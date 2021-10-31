@@ -17,3 +17,10 @@
 .word-color {
     color: #ff8906;
 }
+.username {
+    margin-right: 10px;
+    color: rgb(145, 142, 142);
+}
+.username:hover {
+    color: rgb(194, 193, 193);
+}

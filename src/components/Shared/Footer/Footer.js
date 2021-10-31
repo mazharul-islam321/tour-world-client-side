@@ -14,10 +14,15 @@ const Footer = () => {
                         <div>
                             <h1>TOUR WORLD</h1>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit.
+                                "Money can't buy happiness." <br /> Successful
+                                people realize that events are often random
                             </p>
-                            <i>icons</i>
+                            <div className="footer-icon">
+                                <i className="fab fa-facebook"></i>
+                                <i className="fab fa-twitter-square"></i>
+                                <i className="fab fa-linkedin"></i>
+                                <i className="fab fa-instagram"></i>
+                            </div>
                         </div>
                     </Col>
                     <Col md={3} xs={12} className="my-3">

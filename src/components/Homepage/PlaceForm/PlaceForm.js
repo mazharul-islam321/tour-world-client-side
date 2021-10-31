@@ -12,13 +12,12 @@ const PlaceForm = (props) => {
     const descRef = useRef();
     const priceRef = useRef();
     const imgRef = useRef();
-    const idRef = useRef();
     const statusRef = useRef();
     const addressRef = useRef();
     const phoneRef = useRef();
 
     const { user } = useAuth();
-    const { _id, name, description, price, img } = props?.booking;
+    const { name, description, price, img } = props?.booking;
 
     const handleSubmit = (e) => {
         const name = nameRef.current.value;
@@ -27,7 +26,6 @@ const PlaceForm = (props) => {
         const placeDescriptions = descRef.current.value;
         const placePrice = priceRef.current.value;
         const placeImg = imgRef.current.value;
-        const placeId = idRef.current.value;
         const status = statusRef.current.value;
         const addres = addressRef.current.value;
         const phone = phoneRef.current.value;
@@ -39,12 +37,11 @@ const PlaceForm = (props) => {
             placeDescriptions,
             placePrice,
             placeImg,
-            placeId,
             status,
             addres,
             phone,
         };
-        console.log(saveBooking);
+        // console.log(saveBooking);
         const uri = "http://localhost:4000/placebooking";
         fetch(uri, {
             method: "POST",
@@ -117,13 +114,6 @@ const PlaceForm = (props) => {
                     ref={phoneRef}
                     placeholder="phone"
                     required
-                />
-                <input
-                    type="text"
-                    ref={idRef}
-                    value={_id || ""}
-                    className="disableinput"
-                    readOnly
                 />
                 <input
                     type="text"

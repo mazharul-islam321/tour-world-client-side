@@ -2,6 +2,11 @@
     padding: 60px 0;
     background-color: #0f0e17;
 }
+.experience i {
+    font-size: 45px;
+    margin: 10px 0;
+    color: #ff8906;
+}
 .experience h4 {
     text-align: center;
     margin: 15px 0;
@@ -24,6 +29,7 @@
 }
 .experience-card h2 {
     color: #fffffe;
+    margin: 10px 0;
 }
 .experience-card p {
     color: #a7a9be;

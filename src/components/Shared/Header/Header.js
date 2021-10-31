@@ -60,11 +60,12 @@ const Header = () => {
 
                         {user?.email ? (
                             <span>
-                                <span className="username"></span>
+                                <span className="username">
+                                    {user?.displayName}
+                                </span>
                                 <span className=" logout" onClick={logOut}>
                                     Log Out
                                 </span>
-                                <img src="" className="profile" alt="" />
                             </span>
                         ) : (
                             <Nav>

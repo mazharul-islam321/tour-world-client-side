@@ -1,0 +1,13 @@
+.contact-banner {
+    background-image: url(https://i.ibb.co/JK6cXwj/sea-waves-at-sunset-wallpaper-3440x1440-15.jpg);
+    background-size: 100% 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-banner h2 {
+    color: #ff8906;
+    font-size: 50px;
+    font-weight: 800;
+}

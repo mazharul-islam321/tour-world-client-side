@@ -1,6 +1,6 @@
 .my-booking-style {
     background-color: #0f0e17;
-    padding: 40px;
+    padding: 40px 0;
 }
 .information {
     color: #ff8906;
@@ -16,11 +16,11 @@
     border-radius: 20px;
 }
 .my-booking-card img {
-    width: 20vw;
-    height: 50vh;
+    width: 21vw;
+    height: 56vh;
     border-radius: 20px;
 }
-.my-booking-card h2 {
+.my-booking-card h4 {
     color: #fffffe;
     padding-left: 10px;
     margin: 15px 0;
@@ -42,4 +42,16 @@
     background-color: black;
     border: 2px solid #ff8906;
     color: #fffffe;
+}
+/* @media only screen and (min-width: 688px) and (max-width: 992px)  */
+@media only screen and (max-width: 668px) {
+    .my-booking-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .my-booking-card img {
+        width: 100%;
+        height: 56vh;
+        border-radius: 20px;
+    }
 }

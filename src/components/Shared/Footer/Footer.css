@@ -37,3 +37,8 @@
 .footer-button:hover {
     background-color: #ff8906;
 }
+.footer-icon i {
+    font-size: 45px;
+    margin: 8px;
+    color: rgb(34, 252, 252);
+}
