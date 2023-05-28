@@ -8,7 +8,7 @@ const ManageBooking = () => {
 	const [load, setLoad] = useState(true);
 	const [manageeBooking, setManageeBooking] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:4000/manageallorder")
+		fetch("https://tour-world-server-side.vercel.app/manageallorder")
 			.then((res) => res.json())
 			.then((data) => {
 				setManageeBooking(data);
@@ -19,7 +19,7 @@ const ManageBooking = () => {
 	const handleDelete = (id) => {
 		const proceed = window.confirm("are you sure, you want to delete!!!");
 		if (proceed) {
-			fetch(`http://localhost:4000/mybooking/${id}`, {
+			fetch(`https://tour-world-server-side.vercel.app/mybooking/${id}`, {
 				method: "DELETE",
 			})
 				.then((res) => res.json())
@@ -41,7 +41,7 @@ const ManageBooking = () => {
 		);
 		updatestatus.status = "approved";
 
-		const uri = `http://localhost:4000/mybooking/${id}`;
+		const uri = `https://tour-world-server-side.vercel.app/mybooking/${id}`;
 		fetch(uri, {
 			method: "PUT",
 			headers: {

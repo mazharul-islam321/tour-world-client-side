@@ -1,0 +1,80 @@
+[debug] [2023-05-28T00:19:50.026Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T00:19:50.027Z] Command:       /opt/homebrew/Cellar/node/20.1.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2023-05-28T00:19:50.028Z] CLI Version:   12.2.1
+[debug] [2023-05-28T00:19:50.028Z] Platform:      darwin
+[debug] [2023-05-28T00:19:50.028Z] Node Version:  v20.1.0
+[debug] [2023-05-28T00:19:50.028Z] Time:          Sun May 28 2023 06:19:50 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-05-28T00:19:50.028Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T00:19:50.064Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T00:19:50.065Z] > authorizing via signed-in user (mazharulislam.lu2016@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/mazharulislammamun/Desktop/webProject/tour-world-client-side
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-28T00:19:56.545Z] Using project from CLI flag: tour-world-7fcb7
+[debug] [2023-05-28T00:19:56.548Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7 [none]
+[debug] [2023-05-28T00:19:57.332Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7
+[debug] [2023-05-28T00:19:57.680Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7
+    at RetryOperation._fn (/opt/homebrew/lib/node_modules/firebase-tools/lib/apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project tour-world-7fcb7. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-05-28T00:22:37.538Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T00:22:37.539Z] Command:       /opt/homebrew/Cellar/node/20.1.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2023-05-28T00:22:37.540Z] CLI Version:   12.2.1
+[debug] [2023-05-28T00:22:37.540Z] Platform:      darwin
+[debug] [2023-05-28T00:22:37.540Z] Node Version:  v20.1.0
+[debug] [2023-05-28T00:22:37.540Z] Time:          Sun May 28 2023 06:22:37 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-05-28T00:22:37.540Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T00:22:37.577Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T00:22:37.577Z] > authorizing via signed-in user (mazharulislam.lu2016@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/mazharulislammamun/Desktop/webProject/tour-world-client-side
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-28T00:22:41.552Z] Using project from CLI flag: tour-world-7fcb7
+[debug] [2023-05-28T00:22:41.555Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7 [none]
+[debug] [2023-05-28T00:22:42.338Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7
+[debug] [2023-05-28T00:22:42.686Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7
+    at RetryOperation._fn (/opt/homebrew/lib/node_modules/firebase-tools/lib/apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project tour-world-7fcb7. Please make sure the project exists and your account has permission to access it.

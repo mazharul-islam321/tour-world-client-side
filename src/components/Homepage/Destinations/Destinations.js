@@ -9,7 +9,7 @@ const Destinations = () => {
 	const [places, setPlaces] = useState([]);
 
 	useEffect(() => {
-		const uri = "http://localhost:4000/allbooking";
+		const uri = "https://tour-world-server-side.vercel.app/allbooking";
 		fetch(uri)
 			.then((res) => res.json())
 			.then((data) => {
