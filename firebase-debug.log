@@ -1,0 +1,33 @@
+[debug] [2024-06-03T11:09:49.661Z] ----------------------------------------------------------------------
+[debug] [2024-06-03T11:09:49.662Z] Command:       /Users/mazharulislammamun/.nvm/versions/node/v20.14.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2024-06-03T11:09:49.663Z] CLI Version:   13.10.2
+[debug] [2024-06-03T11:09:49.663Z] Platform:      darwin
+[debug] [2024-06-03T11:09:49.663Z] Node Version:  v20.14.0
+[debug] [2024-06-03T11:09:49.663Z] Time:          Mon Jun 03 2024 17:09:49 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-06-03T11:09:49.663Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-03T11:09:49.699Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-03T11:09:49.699Z] > authorizing via signed-in user (mazharulislam.lu2016@gmail.com)
+[debug] [2024-06-03T11:09:49.699Z] [iam] checking project tour-world-7fcb7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-03T11:09:49.700Z] > refreshing access token with scopes: []
+[debug] [2024-06-03T11:09:49.700Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-03T11:09:49.701Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-03T11:09:50.053Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-06-03T11:09:50.053Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-03T11:09:50.054Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tour-world-7fcb7:testIamPermissions [none]
+[debug] [2024-06-03T11:09:50.054Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tour-world-7fcb7:testIamPermissions x-goog-quota-user=projects/tour-world-7fcb7
+[debug] [2024-06-03T11:09:50.054Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tour-world-7fcb7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-03T11:09:51.915Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tour-world-7fcb7:testIamPermissions 401
+[debug] [2024-06-03T11:09:51.915Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tour-world-7fcb7:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-06-03T11:09:51.917Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-06-03T11:09:51.918Z] > refreshing access token with scopes: []
+[debug] [2024-06-03T11:09:51.919Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-03T11:09:51.919Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-03T11:09:52.060Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-06-03T11:09:52.061Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-03T11:09:52.061Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7 [none]
+[debug] [2024-06-03T11:09:52.399Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7 401
+[debug] [2024-06-03T11:09:52.399Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tour-world-7fcb7 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-06-03T11:09:52.400Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier

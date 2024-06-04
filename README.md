@@ -1,6 +1,6 @@
 # TOUR WORLD
 
-REACT APP [TOUR WORLD](https://tour-world-7fcb7.web.app/).
+REACT APP [TOUR WORLD](https://glittery-paletas-65c339.netlify.app/).
 
 ## Description
 
